@@ -1,4 +1,5 @@
-#pragma once
+#ifndef TOKEN_H
+#define TOKEN_H
 
 #include <iostream>
 #include <istream>
@@ -41,3 +42,5 @@ struct Token_stream {
     std::vector<Token> buffer;
     bool full;
 };
+
+#endif

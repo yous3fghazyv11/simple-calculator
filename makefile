@@ -2,7 +2,7 @@ CC      = g++
 CFLAGS  = -Wall -Wextra -std=c++23
 TARGET  = calc
 
-SRCS    = calc.cpp parser.cpp token.cpp var.cpp
+SRCS    = calc.cpp parser.cpp token.cpp var.cpp utils.cpp
 OBJS    = $(SRCS:.cpp=.o)
 
 CONFIG_DIR := $(HOME)/.config/calc
