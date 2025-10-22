@@ -116,14 +116,6 @@ double term(Token_stream &ts)
                 next = ts.get();
                 break;
             }
-            case Kind::mod: {
-                double val = primary(ts);
-                if (val == 0)
-                    throw std::runtime_error("divison by zero");
-                left = std::fmod(left, val);
-                next = ts.get();
-                break;
-            }
             case Kind::pow:
                 return std::pow(left, primary(ts));
             default:
@@ -138,6 +130,7 @@ double primary(Token_stream &ts)
  * Primary:
  *   Value
  *   Value!
+ *   Value%
  *   +Value
  *   -Value
  *   (Expression)
@@ -176,6 +169,9 @@ double primary(Token_stream &ts)
                 }
                 return factorial(num);
             }
+			if (next.kind == Kind::mod) {
+				return (num / 100);
+			}
             ts.putback(next);
             return num;
         }
