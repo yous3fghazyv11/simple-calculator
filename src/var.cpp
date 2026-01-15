@@ -1,4 +1,4 @@
-#include "var.h"
+#include "../include/var.h"
 #include <stdexcept>
 
 std::vector<Var> var_table;

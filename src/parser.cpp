@@ -1,7 +1,7 @@
-#include "parser.h"
-#include "token.h"
-#include "utils.h"
-#include "var.h"
+#include "../include/parser.h"
+#include "../include/token.h"
+#include "../include/utils.h"
+#include "../include/var.h"
 #include <cmath>
 #include <stdexcept>
 

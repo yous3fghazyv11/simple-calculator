@@ -1,6 +1,6 @@
-#include "parser.h"
-#include "token.h"
-#include "var.h"
+#include "../include/parser.h"
+#include "../include/token.h"
+#include "../include/var.h"
 #include <exception>
 #include <fstream>
 #include <iostream>

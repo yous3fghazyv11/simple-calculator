@@ -1,4 +1,4 @@
-#include "token.h"
+#include "../include/token.h"
 #include <cctype>
 #include <stdexcept>
 #include <string>
