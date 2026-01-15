@@ -1,8 +1,8 @@
 CC      = g++
-CFLAGS  = -Wall -Wextra -std=c++23
+CFLAGS  = -Wall -Wextra -std=c++23 -lreadline -lhistory
 TARGET  = calc
 
-SRCS    = calc.cpp parser.cpp token.cpp var.cpp utils.cpp
+SRCS    = calc.cpp parser.cpp token.cpp var.cpp utils.cpp raw_input.cpp
 OBJS    = $(SRCS:.cpp=.o)
 
 CONFIG_DIR := $(HOME)/.config/calc

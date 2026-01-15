@@ -6,6 +6,9 @@
 #include <iostream>
 #include <sstream>
 #include <cstdlib>
+#include <string>
+#include <readline/readline.h>
+#include <readline/history.h>
 
 namespace color {
     constexpr char green[] = "\033[92m";
@@ -15,7 +18,12 @@ namespace color {
 
 void repl() {
     std::cout << "type 'q' or 'quit' to exit\n";
-    for (std::string line; std::cout << "> " && std::getline(std::cin, line);) {
+    while (char *cline = readline("> ")) {
+		if (!cline) {
+			break;
+		}
+        if (*cline) add_history(cline);
+        std::string line = cline;
         try {
             std::stringstream line_buffer{line};
             Token_stream ts(line_buffer);
